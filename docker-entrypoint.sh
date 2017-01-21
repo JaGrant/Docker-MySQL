@@ -187,7 +187,7 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 fi
 
 #exec "$@"
-echo "Starting Cron..."
-service cron restart
+#echo "Starting Cron..."
+#service cron restart
 echo "Starting Mysqld"
 $@
