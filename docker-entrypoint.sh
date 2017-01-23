@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+if [ $UID -eq 0 ]; then
+echo '--- Starting Cron: ---'
+service cron start
+who -m
+id
+fi
+
 set -eo pipefail
 shopt -s nullglob
 
@@ -187,7 +195,5 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 fi
 
 #exec "$@"
-#echo "Starting Cron..."
-#service cron restart
 echo "Starting Mysqld"
 $@
