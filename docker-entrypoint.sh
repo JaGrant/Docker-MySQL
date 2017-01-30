@@ -1,11 +1,12 @@
 #!/bin/bash
 
-
+# Check that we are are root
 if [ $UID -eq 0 ]; then
-echo '--- Starting Cron: ---'
-service cron start
-who -m
-id
+  # if we are root we can start addititional services
+  who -m
+  id
+  echo '--- Starting Cron: ---'
+  service cron start
 fi
 
 set -eo pipefail
