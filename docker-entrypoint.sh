@@ -5,7 +5,7 @@ if [ $UID -eq 0 ]; then
   # if we are root we can start addititional services
   who -m
   id
-  echo '--- Starting Cron: ---'
+  echo "--- Starting Cron: ---"
   service cron start
 fi
 
