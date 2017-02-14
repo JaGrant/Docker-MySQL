@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Deleting mysql container"
+echo "Stopping and removing 'mysql' docker container"
 sudo docker stop mysql
 sudo docker rm mysql
 sudo docker rmi mysql
