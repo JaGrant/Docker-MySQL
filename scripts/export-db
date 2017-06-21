@@ -1,2 +1,2 @@
- */5 * * * * mysqldump -uroot -ppassword --databases db1 > /databaseExports/db1_data.sql
+0 */6 * * * mysqldump -uroot --databases db1 > /db-exports/db1_data.sql
 # An empty line is required at the end of this file for a valid cron file.
