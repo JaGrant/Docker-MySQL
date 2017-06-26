@@ -1,5 +1,5 @@
 # Docker-MySQL
-##A Docker container running MySQL 5.6
+A Docker container running MySQL 5.6
 This is a MySQL database docker container with persistent data storage and automated hourly sql exports running MySQL 5.6
 
 
@@ -30,15 +30,15 @@ If you wish to remove the container run:
 ./remove.sh
 ```
 
-
+# Add your user to Docker group
 
 ##### If you receive a permission denied message whilst trying to run any of the .sh scripts to build, start, bash or remove your container, please make sure your user is part of the docker group by following these steps:"
 
-####Create the docker group:
+#### Create the docker group:
 ```
 sudo groupadd docker"
 ```
-####Adding your user to the docker group:
+#### Adding your user to the docker group:
 ```
 sudo usermod -aG docker $USER"
 ```
