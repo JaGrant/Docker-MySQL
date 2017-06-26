@@ -1,2 +1,7 @@
-db-data/
-db-exports/
+# exclude everything
+db-data/*
+db-exports/*
+
+# exception to the rule
+!db-data/.gitkeep
+!db-exports/.gitkeep
