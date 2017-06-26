@@ -1,3 +1,2 @@
 This file is a placeholder to ensure this directory is included in git.
 This directory is where /var/lib/mysql is mapped to and is critical to the operation of the container
-
