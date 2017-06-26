@@ -1,2 +1,4 @@
 #!/bin/bash
-sudo docker build -t mysql .
+echo "---- build.sh ---> Building 'mysql' Docker container"
+
+docker build -t mysql .

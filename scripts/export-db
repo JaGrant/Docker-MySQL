@@ -1,2 +1,2 @@
-0 */6 * * * mysqldump -uroot --databases db1 > /db-exports/db1_data.sql
+* */1 * * * mysqldump -uroot --databases db1 > /db-exports/db1_data_`date +"\%Y-\%m-\%d__\%H-\%M-\%p"`.sql
 # An empty line is required at the end of this file for a valid cron file.

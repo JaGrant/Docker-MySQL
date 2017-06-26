@@ -1,8 +1,9 @@
 #!/bin/bash
-echo "Stopping and removing 'mysql' docker container"
-sudo docker stop mysql
-sudo docker rm mysql
-sudo docker rmi mysql
+echo "---- remove.sh ---> Stopping and removing 'mysql' docker container"
+
+docker stop mysql
+docker rm mysql
+docker rmi mysql
 
 #echo "Removing ALL Containers!"
 #sudo docker rm $(sudo docker ps -a -q)

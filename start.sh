@@ -1,17 +1,19 @@
 #!/bin/sh
-echo "----- start.sh ---> Starting Container"
-# sudo docker run --name mysql -p 3306:3306 -v /opt/docker/containers/database/data:/databaseExports -e MYSQL_ROOT_PASSWORD=password mysql
+echo "---- start.sh ---> Starting 'mysql ' container"
 
-sudo docker run \
+docker run \
 --detach \
 --name=mysql \
 --env="MYSQL_ROOT_PASSWORD=password" \
 --publish 6603:3306 \
---volume=/opt/docker/containers/mysql/conf.d:/etc/mysql/conf.d \
---volume=/opt/docker/containers/mysql/db-data:/var/lib/mysql \
---volume=/opt/docker/containers/mysql/db-exports:/db-exports \
+--volume=/opt/docker/containers/database/conf.d:/etc/mysql/conf.d \
+--volume=/opt/docker/containers/database/db-data:/var/lib/mysql \
+--volume=/opt/docker/containers/database/db-exports:/db-exports \
 mysql
 
+echo "Log File:"
+docker inspect mysql | grep LogPath
+echo " "
 echo " "
 echo " Mysql external port: 6603"
 echo " "
