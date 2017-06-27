@@ -1,33 +1,56 @@
 # Docker-MySQL
-A Docker container running MySQL 5.6
-This is a MySQL database docker container with persistent data storage and automated hourly sql exports running MySQL 5.6
+A Docker container running MySQL 5.6 with persistent data storage and automated hourly sql exports.
 
 
 # Installation and usage:
-To get started, just clone the git repository to the machine where you wish to host the container and cd to the directory.
+To get started, Clone the git repository and cd to the directory.
 
 
 #### Building the container:
 To build the container run:
 ```
-./build.sh
+make build
 ```
 
 #### Starting the container:
 To start the container run:
 ```
-./start.sh
+make run
 ```
 
 #### Access a bash console inside the container:
 ```
-./bash.sh
+make bash
+```
+
+#### Stopping the container:
+If you wish to stop the container run:
+```
+make stop
 ```
 
 #### Removing the container:
-If you wish to remove the container run:
+If you wish to remove the container and it's images run:
 ```
-./remove.sh
+make remove
+```
+
+#### View container logfile:
+If you wish to stream the containers logfile run:
+```
+make log
+```
+
+#### View container information:
+To display useful information about the container run:
+```
+make info
+```
+
+#### View usage instructions:
+To view the usage instructions from the command line run:
+```
+make help
 ```
 
 # Add your user to Docker group
@@ -41,13 +64,4 @@ sudo groupadd docker"
 #### Adding your user to the docker group:
 ```
 sudo usermod -aG docker $USER"
-```
-
-Additionally, you'll need to ensure that the .sh scripts are executable.
-If you need to make them executable, just run:
-```
-sudo chmod u+x build.sh
-sudo chmod u+x start.sh
-sudo chmod u+x bash.sh
-sudo chmod u+x remove.sh
 ```
