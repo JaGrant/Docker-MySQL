@@ -70,9 +70,9 @@ run:
 	--name=$(ContainerName) \
 	--env="MYSQL_ROOT_PASSWORD=password" \
 	--publish 6603:3306 \
-	--volume=/opt/docker/containers/database/conf.d:/etc/mysql/conf.d \
-	--volume=/opt/docker/containers/database/db-data:/var/lib/mysql \
-	--volume=/opt/docker/containers/database/db-exports:/db-exports \
+	--volume=$(ContainerDir)/conf.d:/etc/mysql/conf.d \
+	--volume=$(ContainerDir)/db-data:/var/lib/mysql \
+	--volume=$(ContainerDir)/db-exports:/db-exports \
 	$(ContainerName)
 	@ echo ""
 	@ echo ""
