@@ -29,6 +29,10 @@ help: # Makefile help guide
 	@ echo "    Usage: make run"
 	@ echo "    Desc: Starts the docker container"
 	@ echo ""
+	@ echo "START"
+	@ echo "    Usage: make start"
+	@ echo "    Desc: restarts a stopped docker container"
+	@ echo ""
 	@ echo "BASH"
 	@ echo "    Usage: make bash"
 	@ echo "    Desc: Access the bash terminal of the docker container"
@@ -76,6 +80,16 @@ run:
 	$(ContainerName)
 	@ echo ""
 	@ echo ""
+
+
+start:
+		@ echo "------------------------------------------------------------"
+		@ echo "              Starting $(ContainerName) V$(ContainerVersion) Docker container"
+		@ echo "------------------------------------------------------------"
+		@ echo ""
+		@ docker start $(ContainerName)
+		@ echo ""
+		@ echo ""
 
 
 bash:
