@@ -27,7 +27,7 @@ help: # Makefile help guide
 	@ echo ""
 	@ echo "RUN"
 	@ echo "    Usage: make run"
-	@ echo "    Desc: Starts the docker container"
+	@ echo "    Desc: Starts the docker container for the first time or after building"
 	@ echo ""
 	@ echo "START"
 	@ echo "    Usage: make start"
